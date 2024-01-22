@@ -29,4 +29,4 @@ var newCar = Car(model: "Honda", numberOfSeats: 5)
 newCar.changeGear("up")         // prints  You've changed gear from 1 to 2
 newCar.changeGear("down")       // prints  You've changed gear from 2 to 1
 newCar.changeGear("down")       // prints  You're bad driver
-newCar
+
