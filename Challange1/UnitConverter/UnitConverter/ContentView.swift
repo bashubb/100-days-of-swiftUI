@@ -9,30 +9,22 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var inputValue = 0.0
-    @State var inputUnit: Dimension = UnitTemperature.celsius
-    @State var outputUnit: Dimension = UnitTemperature.fahrenheit
-    @State var choosenConvertion = "Temperature"
+    @State private var inputValue = 0.0
+    @State private var inputUnit: Dimension = UnitTemperature.celsius
+    @State private var outputUnit: Dimension = UnitTemperature.fahrenheit
+    @State private var choosenConvertion = 0
     @FocusState var isFocused : Bool
     
-    let conversions = ["Temperature", "Lenght", "Time", "Volume"]
+    let conversions = ["Temperature", "Distance", "Time", "Volume"]
     
-    let units = [
+    let unitTypes = [
         [UnitTemperature.celsius,UnitTemperature.fahrenheit,UnitTemperature.kelvin],
         [UnitLength.meters,UnitLength.kilometers,UnitLength.feet, UnitLength.yards, UnitLength.miles],
         [UnitDuration.seconds, UnitDuration.minutes, UnitDuration.hours],
         [UnitVolume.milliliters, UnitVolume.liters, UnitVolume.cups, UnitVolume.pints,UnitVolume.gallons]
     ]
+    
     let formatter: MeasurementFormatter
-    
-    
-    var unitsForConversion: [Dimension] {
-        let unitIndex = conversions.firstIndex(of: choosenConvertion)
-        guard let unitIndex = unitIndex else{
-            return units[0]
-        }
-        return units[unitIndex]
-    }
     
     var result: String {
         let inputMeasurement = Measurement(value: inputValue, unit: inputUnit)
@@ -47,8 +39,8 @@ struct ContentView: View {
               
                 Section("choose convertion") {
                     Picker("Choose convertion", selection: $choosenConvertion) {
-                        ForEach(conversions, id: \.self) {
-                            Text($0)
+                        ForEach(0..<conversions.count, id: \.self) {
+                            Text(conversions[$0])
                         }
                     }
                     .pickerStyle(.segmented)
@@ -57,12 +49,12 @@ struct ContentView: View {
                 
                 Section("choose Units") {
                     Picker("Input Unit", selection: $inputUnit){
-                        ForEach(unitsForConversion, id: \.self) {
+                        ForEach(unitTypes[choosenConvertion], id: \.self) {
                             Text(formatter.string(from: $0).capitalized)
                         }
                     }
                     Picker("Output Unit", selection: $outputUnit){
-                        ForEach(unitsForConversion, id: \.self) {
+                        ForEach(unitTypes[choosenConvertion], id: \.self) {
                             Text(formatter.string(from: $0).capitalized)
                         }
                     }
@@ -95,8 +87,11 @@ struct ContentView: View {
                     }
                 }
             }
-            
-            
+            .onChange(of: choosenConvertion) {
+                let units = unitTypes[choosenConvertion]
+                inputUnit = units[0]
+                outputUnit = units[1]
+            }
         }
     }
     
