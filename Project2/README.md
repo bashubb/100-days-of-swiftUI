@@ -6,7 +6,7 @@ Includes solutions to the [challenges](https://www.hackingwithswift.com/books/io
 
 ## Topics
 
-VStack, Image, Alert
+VStack, Image, Alert, ZStack, Gradient, Button
 
 ## Challenges
 
