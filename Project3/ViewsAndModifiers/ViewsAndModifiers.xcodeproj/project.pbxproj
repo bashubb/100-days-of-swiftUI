@@ -13,6 +13,7 @@
 		B58F9DD72B692BE300553003 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B58F9DD62B692BE300553003 /* Preview Assets.xcassets */; };
 		B58F9DDE2B69862C00553003 /* EnvironmentModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58F9DDD2B69862C00553003 /* EnvironmentModifiers.swift */; };
 		B58F9DE02B69877800553003 /* PropertyViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58F9DDF2B69877800553003 /* PropertyViews.swift */; };
+		B58F9DE22B698A0B00553003 /* ViewComposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58F9DE12B698A0B00553003 /* ViewComposition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		B58F9DD62B692BE300553003 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B58F9DDD2B69862C00553003 /* EnvironmentModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentModifiers.swift; sourceTree = "<group>"; };
 		B58F9DDF2B69877800553003 /* PropertyViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyViews.swift; sourceTree = "<group>"; };
+		B58F9DE12B698A0B00553003 /* ViewComposition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewComposition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				B58F9DD12B692BE100553003 /* ConditionalModifiers.swift */,
 				B58F9DDD2B69862C00553003 /* EnvironmentModifiers.swift */,
 				B58F9DDF2B69877800553003 /* PropertyViews.swift */,
+				B58F9DE12B698A0B00553003 /* ViewComposition.swift */,
 				B58F9DD32B692BE300553003 /* Assets.xcassets */,
 				B58F9DD52B692BE300553003 /* Preview Content */,
 			);
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B58F9DDE2B69862C00553003 /* EnvironmentModifiers.swift in Sources */,
+				B58F9DE22B698A0B00553003 /* ViewComposition.swift in Sources */,
 				B58F9DE02B69877800553003 /* PropertyViews.swift in Sources */,
 				B58F9DD22B692BE100553003 /* ConditionalModifiers.swift in Sources */,
 				B58F9DD02B692BE100553003 /* ViewsAndModifiersApp.swift in Sources */,
