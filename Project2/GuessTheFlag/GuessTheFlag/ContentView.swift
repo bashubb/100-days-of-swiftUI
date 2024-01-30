@@ -8,11 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Spain", "UK", "Ukraine", "US"]
+    @State private var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Spain", "UK", "Monaco", "US"]
     @State private var correctAnswer = Int.random(in: 0...2)
     
     @State private var showingScore = false
+    @State private var showingResults = false
     @State private var scoreTitle = ""
+    @State private var score = 0
+    @State private var questionCounter = 1
+    
     
     var body: some View {
         ZStack {
@@ -57,7 +61,7 @@ struct ContentView: View {
                 Spacer()
                 Spacer()
                 
-                Text("Score: ???")
+                Text("Score: \(score)")
                     .foregroundStyle(.white)
                     .font(.title.bold())
                 
@@ -65,26 +69,55 @@ struct ContentView: View {
             }
             .padding()
         }
+        .alert("Your game is over !", isPresented: $showingResults) {
+            Button("New Game", action: newGame)
+        } message:{
+            Text("Your final  score is \(score)")
+        }
         .alert(scoreTitle, isPresented: $showingScore) {
             Button("Continue", action: askQuestion)
         } message: {
-            Text("Your score is ???")
+            Text("Your score is \(score)")
         }
+        
     }
     
     func flagTapped(_ number: Int) {
         if number == correctAnswer {
             scoreTitle = "Correct!"
+            score += 10
         } else {
-            scoreTitle = "Wrong!"
+            let needsThe = ["UK", "US"]
+            let theirAnswer = countries[number]
+            
+            if needsThe.contains(theirAnswer) {
+                scoreTitle = "Wrong! That's the flag of the \(theirAnswer)"
+            } else {
+                scoreTitle = "Wrong! That's the flag of \(theirAnswer)"
+            }
+            if score > 10 {
+                score -= 10
+            }
         }
-        
-        showingScore = true
+      
+        if questionCounter == 8 {
+            showingResults = true
+        } else {
+            showingScore = true
+        }
     }
     
     func askQuestion() {
+        countries.remove(at: correctAnswer)
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
+        questionCounter += 1
+    }
+    
+    func newGame() {
+        score = 0
+        questionCounter = 0
+        askQuestion()
     }
 }
 
