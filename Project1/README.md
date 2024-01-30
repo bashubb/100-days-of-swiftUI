@@ -6,7 +6,7 @@ Includes solutions to the [challenges](https://www.hackingwithswift.com/books/io
 
 ## Topics
 
-Form, Section, NavigationView, @State property wrapper, TextField, Picker, ForEach
+Form, Section, @State property wrapper, TextField, Picker, ForEach
 
 ## Challenges
 
