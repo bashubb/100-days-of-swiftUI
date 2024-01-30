@@ -15,6 +15,7 @@
 		B58F9DE02B69877800553003 /* PropertyViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58F9DDF2B69877800553003 /* PropertyViews.swift */; };
 		B58F9DE22B698A0B00553003 /* ViewComposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58F9DE12B698A0B00553003 /* ViewComposition.swift */; };
 		B58F9DE42B698C0900553003 /* CustomModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58F9DE32B698C0900553003 /* CustomModifiers.swift */; };
+		B58F9DE62B698E6300553003 /* CustomContainers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58F9DE52B698E6300553003 /* CustomContainers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		B58F9DDF2B69877800553003 /* PropertyViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyViews.swift; sourceTree = "<group>"; };
 		B58F9DE12B698A0B00553003 /* ViewComposition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewComposition.swift; sourceTree = "<group>"; };
 		B58F9DE32B698C0900553003 /* CustomModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModifiers.swift; sourceTree = "<group>"; };
+		B58F9DE52B698E6300553003 /* CustomContainers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomContainers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				B58F9DDF2B69877800553003 /* PropertyViews.swift */,
 				B58F9DE12B698A0B00553003 /* ViewComposition.swift */,
 				B58F9DE32B698C0900553003 /* CustomModifiers.swift */,
+				B58F9DE52B698E6300553003 /* CustomContainers.swift */,
 				B58F9DD32B692BE300553003 /* Assets.xcassets */,
 				B58F9DD52B692BE300553003 /* Preview Content */,
 			);
@@ -149,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B58F9DE62B698E6300553003 /* CustomContainers.swift in Sources */,
 				B58F9DDE2B69862C00553003 /* EnvironmentModifiers.swift in Sources */,
 				B58F9DE22B698A0B00553003 /* ViewComposition.swift in Sources */,
 				B58F9DE02B69877800553003 /* PropertyViews.swift in Sources */,
