@@ -11,53 +11,65 @@ struct ContentView: View {
     let moves = ["✊", "🫲", "✌️"]
     
     @State private var computerChoice = Int.random(in: 0..<3)
-    @State private var shouldWin = Bool.random()
+    @State private var shouldWin = true
     
     @State private var score = 0
     @State private var questionCount = 1
-    @State private var showingResults = false
+    @State private var showingResults = Bool.random()
     
     var body: some View {
-        VStack {
-            Spacer()
-            Text("Computer has played...")
-                .font(.headline)
+        ZStack {
+            LinearGradient(colors: [Color.gray, Color.white, Color.gray], startPoint: .top, endPoint: .bottom)
+                .ignoresSafeArea()
             
-            Text(moves[computerChoice])
-                .font(.system(size:200))
+            VStack {
+                Spacer()
+                Text("Computer has played...")
+                    .font(.headline)
                 
-            if shouldWin {
-                Text("Which one wins?")
-                    .foregroundStyle(.green)
-                    .font(.title)
-            } else {
-                Text("Wich one loses?")
-                    .foregroundStyle(.red)
-                    .font(.title)
-            }
-            
-            HStack {
-                ForEach(0..<3) {number in
-                    Button(moves[number]) {
-                        play(choice: number)
-                    }
-                    .font(.system(size: 80))
+                Text(moves[computerChoice])
+                    .font(.system(size:200))
+                
+                if shouldWin {
+                    Text("Which one wins?")
+                        .foregroundStyle(.green)
+                        .font(.title)
+                        .shadow(radius: 0.2, x: 1, y:1)
+                } else {
+                    Text("Wich one loses?")
+                        .foregroundStyle(.red)
+                        .font(.title)
+                        .shadow(radius: 0.2, x: 1, y:1)
                 }
+                
+                HStack {
+                    ForEach(0..<3) {number in
+                        Button(moves[number]) {
+                            play(choice: number)
+                        }
+                        .font(.system(size: 80))
+                    }
+                }
+                .padding()
+                .background(.ultraThinMaterial, in: .rect(cornerRadius: 20))
+                .shadow(radius: 1)
+                .padding(.top, 20)
+                
+                
+                Spacer()
+                
+                Text("Score: \(score)")
+                    .font(.subheadline)
+                    .foregroundStyle(.primary)
+                
+                Spacer()
             }
-            
-            Spacer()
-            
-            Text("Score: \(score)")
-                .font(.subheadline)
-            
-            Spacer()
+            .alert("Game over", isPresented: $showingResults) {
+                Button("Play again", action: reset)
+            } message: {
+                Text("Your score was \(score)")
+            }
         }
-        .alert("Game over", isPresented: $showingResults) {
-            Button("Play again", action: reset)
-        } message: {
-            Text("Your score was \(score)")
-        }
-        
     }
     
     func play(choice: Int) {
