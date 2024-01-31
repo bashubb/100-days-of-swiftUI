@@ -1,8 +1,8 @@
 //
 //  ContentView.swift
-//  WeSplit
+//  Project3Challenge1
 //
-//  Created by HubertMac on 22/01/2024.
+//  Created by HubertMac on 31/01/2024.
 //
 
 import SwiftUI
