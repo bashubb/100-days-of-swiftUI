@@ -1,4 +1,4 @@
-# Project 3 - Challenge 2
+# Project 3 - Challenge 1
 
 https://www.hackingwithswift.com/books/ios-swiftui/views-and-modifiers-wrap-up
 
