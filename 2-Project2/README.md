@@ -16,3 +16,5 @@ From [Hacking with Swift](https://www.hackingwithswift.com/books/ios-swiftui/gue
 >3. Make the game show only 8 questions, at which point they see a final alert judging their score and can restart the game.
 
 ## Screenshots
+
+<img src="screenshots/GuessTheFlagscreen.jpeg" width="40%"> <img src="screenshots/GuessTheFlagscreen2.jpeg" width="40%">
