@@ -9,4 +9,4 @@ From [Hacking with Swift](https://www.hackingwithswift.com/books/ios-swiftui/vie
 
 ## Screenshots
 
-![screenshot1](screenshots/screen01.png)
+<img src="screenshots/Project3_challenge1screen.jpeg" width="40%">
