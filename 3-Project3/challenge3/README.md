@@ -7,6 +7,4 @@ https://www.hackingwithswift.com/books/ios-swiftui/views-and-modifiers-wrap-up
 From [Hacking with Swift](https://www.hackingwithswift.com/books/ios-swiftui/views-and-modifiers-wrap-up):
 >Create a custom ViewModifier (and accompanying View extension) that makes a view have a large, blue font suitable for prominent titles in a view.
 
-## Screenshots
 
-![screenshot1](screenshots/screen01.png)
