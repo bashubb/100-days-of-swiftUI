@@ -15,19 +15,7 @@ From [Hacking with Swift](https://www.hackingwithswift.
 >2.  Replace the “Number of cups” stepper with a Picker showing the same range of values.
 >3.  Change the user interface so that it always shows their recommended bedtime using a nice and large font. You should be able to remove the “Calculate” button entirely.
 
-### Note for challenge 2
-After solving, the Picker was replaced by the original Stepper, that takes less space and is more responsive. Code for challenge is still in the source file, though commented, or here below.
-```swift
-Picker("Coffee intake", selection: $coffeeAmount) {
-    ForEach(1...20, id: \.self) { i in
-        Text("\(i) \(i == 1 ? "cup" : "cups")")
-    }
-}
-.id("coffee")
-.labelsHidden()
-.pickerStyle(WheelPickerStyle())
-```
 
 ## Screenshots
 
-![screenshot1](screenshots/screen01.png)
+<img src="https://github.com/bashubb/100-days-of-swiftUI/blob/main/5-Project4/screenshots/BetterRestgif.gif" width="50%"> 
