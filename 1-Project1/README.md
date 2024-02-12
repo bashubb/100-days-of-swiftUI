@@ -17,4 +17,4 @@ From [Hacking with Swift](https://www.hackingwithswift.com/books/ios-swiftui/wes
 
 ## Screenshots
 
-<img src="screenshots/WeSplitGif.gif" width="50%">
+<img src="screenshots/WeSplitGif.gif" width="40%">
