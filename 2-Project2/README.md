@@ -17,4 +17,4 @@ From [Hacking with Swift](https://www.hackingwithswift.com/books/ios-swiftui/gue
 
 ## Screenshots
 
-<img src="screenshots/GuessTheFlagscreen.jpeg" width="40%"> <img src="screenshots/GuessTheFlagscreen2.jpeg" width="40%">
+<img src="screenshots/GuessTheflaggif.gif" width="50%">
