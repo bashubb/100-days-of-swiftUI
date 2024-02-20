@@ -37,6 +37,15 @@ struct ContentView: View {
                     }
                 }
             }
+            //challenge3
+            .safeAreaInset(edge: .bottom) {
+                Text("Score: \(scoreForWord)")
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .background(.blue)
+                    .foregroundStyle(.white)
+                    .font(.title)
+            }
             .navigationTitle(rootWord)
             .onSubmit(addNewWord)
             .onAppear(perform: startGame)
@@ -53,13 +62,13 @@ struct ContentView: View {
                         usedWords.removeAll()
                     }
                 }
-                //challenge3
-                ToolbarItem(placement: .topBarLeading) {
-                    Text("Score for this word : \(scoreForWord)")
-                        .foregroundStyle(.red.opacity(0.7))
-                        .padding(4)
-                        .background(.white, in: .rect(cornerRadius:10))
-                }
+                //challenge3 - old solution
+//                ToolbarItem(placement: .topBarLeading) {
+//                    Text("Score for this word : \(scoreForWord)")
+//                        .foregroundStyle(.red.opacity(0.7))
+//                        .padding(4)
+//                        .background(.white, in: .rect(cornerRadius:10))
+//                }
             }
         }
     }
