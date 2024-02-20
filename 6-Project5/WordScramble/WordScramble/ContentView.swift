@@ -12,7 +12,6 @@ struct ContentView: View {
     @State private var rootWord = ""
     @State private var newWord = ""
     
-    
     var body: some View {
         NavigationStack {
             List {
@@ -35,8 +34,6 @@ struct ContentView: View {
         }
     }
     
-    
-    
     func addNewWord() {
         let answer = newWord.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
         guard answer.count > 0 else { return }
@@ -45,10 +42,10 @@ struct ContentView: View {
         withAnimation {
             usedWords.insert(answer, at: 0)
         }
-        
         newWord = ""
     }
 }
+
 #Preview {
     ContentView()
 }
