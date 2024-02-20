@@ -16,6 +16,9 @@ struct ContentView: View {
     @State private var errorMessage = ""
     @State private var showingError = false
     
+    //challenge3
+    @State private var scoreForWord = 0
+    
     var body: some View {
         NavigationStack {
             List {
@@ -47,6 +50,13 @@ struct ContentView: View {
                     Button("Restart") {
                         startGame()
                     }
+                }
+                //challenge3
+                ToolbarItem(placement: .topBarLeading) {
+                    Text("Score for this word : \(scoreForWord)")
+                        .foregroundStyle(.red.opacity(0.7))
+                        .padding(4)
+                        .background(.white, in: .rect(cornerRadius:10))
                 }
             }
         }
@@ -86,6 +96,8 @@ struct ContentView: View {
         withAnimation {
             usedWords.insert(answer, at: 0)
         }
+        //challenge3
+        calculateScore()
         newWord = ""
     }
     
@@ -94,6 +106,8 @@ struct ContentView: View {
             if let startWords = try? String(contentsOf: startWordsUrl) {
                 let allWords = startWords.components(separatedBy: "\n")
                 rootWord = allWords.randomElement() ?? "silkworm"
+                //challenge3
+                scoreForWord = 0
                 return
             }
         }
@@ -145,6 +159,11 @@ struct ContentView: View {
         errorTitle = title
         errorMessage = message
         showingError =  true
+    }
+    
+    //challenge3
+    func calculateScore() {
+        scoreForWord += 10
     }
     
 }
