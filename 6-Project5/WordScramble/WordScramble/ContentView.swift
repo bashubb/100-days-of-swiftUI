@@ -49,6 +49,7 @@ struct ContentView: View {
                 ToolbarItem{
                     Button("Restart") {
                         startGame()
+                        usedWords.removeAll()
                     }
                 }
                 //challenge3
