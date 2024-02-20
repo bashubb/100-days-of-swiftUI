@@ -62,6 +62,19 @@ struct ContentView: View {
             wordError(title: "Word not recognized", message: "You can't just make them up, you know!")
             return
         }
+        
+        //challenge1
+        guard isDifferentThanRootWord(word: answer) else {
+            wordError(title: "Word is the same as the RootWord", message: "Try harder!")
+            return
+        }
+        
+        //challenge1
+        guard isLongEnough(word: answer) else {
+            wordError(title: "Word is too short", message: "You need to use few more letters")
+            return
+        }
+        
         withAnimation {
             usedWords.insert(answer, at: 0)
         }
@@ -97,11 +110,27 @@ struct ContentView: View {
         return true
     }
     
-    func isReal(word:String) -> Bool {
+    func isReal(word: String) -> Bool {
         let checker = UITextChecker()
         let range = NSRange(location: 0, length: word.utf16.count)
         let misspeledRange = checker.rangeOfMisspelledWord(in: word, range: range, startingAt: 0, wrap: false, language: "en")
         return misspeledRange.location == NSNotFound
+    }
+    
+    // challenge1
+    func isDifferentThanRootWord(word: String) -> Bool {
+        guard word != rootWord else {
+            return false
+        }
+        return true
+    }
+    
+    //challenge1
+    func isLongEnough(word: String) -> Bool {
+        guard word.count > 3 else {
+            return false
+        }
+        return true
     }
     
     func wordError(title: String, message: String) {
@@ -109,6 +138,7 @@ struct ContentView: View {
         errorMessage = message
         showingError =  true
     }
+    
 }
 
 #Preview {
