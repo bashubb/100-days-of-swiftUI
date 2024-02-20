@@ -59,7 +59,6 @@ struct ContentView: View {
                 ToolbarItem{
                     Button("Restart") {
                         startGame()
-                        usedWords.removeAll()
                     }
                 }
                 //challenge3 - old solution
@@ -118,7 +117,9 @@ struct ContentView: View {
                 let allWords = startWords.components(separatedBy: "\n")
                 rootWord = allWords.randomElement() ?? "silkworm"
                 //challenge3
+                newWord = ""
                 scoreForWord = 0
+                usedWords.removeAll()
                 return
             }
         }
