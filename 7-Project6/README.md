@@ -8,7 +8,7 @@ Animations and transitions
 
 ## Challenges
 
-[Project 6 - Challenges](Challenges/)
+[Project 6 - Challenges](https://github.com/bashubb/100-days-of-swiftUI/tree/main/7-Project6/challenges)
 
 ## Screenshots
 
