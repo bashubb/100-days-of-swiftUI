@@ -12,4 +12,4 @@ Animations and transitions
 
 ## Screenshots
 
-<img src="https://github.com/bashubb/100-days-of-swiftUI/blob/main/7-Project6/Animation1.gif" height="10%"><img src="https://github.com/bashubb/100-days-of-swiftUI/blob/main/7-Project6/Animation3.gif" height="10%"><img src="https://github.com/bashubb/100-days-of-swiftUI/blob/main/7-Project6/Animation4.gif" height="10%"><img src="https://github.com/bashubb/100-days-of-swiftUI/blob/main/7-Project6/Animation5.gif" height="10%"><img src="https://github.com/bashubb/100-days-of-swiftUI/blob/main/7-Project6/Animation6.gif" height="10%"><img src="https://github.com/bashubb/100-days-of-swiftUI/blob/main/7-Project6/Animation7.gif" height="10%">
+<img src="https://github.com/bashubb/100-days-of-swiftUI/blob/main/7-Project6/Animation1.gif" height="10%"><img src="https://github.com/bashubb/100-days-of-swiftUI/blob/main/7-Project6/Animation3.gif" height="10%">><img src="https://github.com/bashubb/100-days-of-swiftUI/blob/main/7-Project6/Animation6.gif" height="10%"><img src="https://github.com/bashubb/100-days-of-swiftUI/blob/main/7-Project6/Animation7.gif" height="10%">
