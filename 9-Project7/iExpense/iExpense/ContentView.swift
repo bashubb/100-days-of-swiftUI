@@ -8,11 +8,12 @@
 
 import SwiftUI
 
-struct ExpenseItem: Identifiable, Codable {
+struct ExpenseItem: Identifiable, Codable, Equatable {
     var id = UUID()
     let name: String
     let type: String
     let amount: Double
+
 }
 
 @Observable
@@ -23,6 +24,14 @@ class Expenses {
                 UserDefaults.standard.set(encoded, forKey: "Items")
             }
         }
+    }
+    
+    var personalItems: [ExpenseItem] {
+        items.filter { $0.type == "Personal" }
+    }
+    
+    var businessItems: [ExpenseItem] {
+        items.filter { $0.type == "Business" }
     }
     
     init() {
@@ -37,25 +46,16 @@ class Expenses {
 }
 
 struct ContentView: View {
-    @State private var expences = Expenses()
+    @State private var expenses = Expenses()
     
     @State private var showingAddExpense = false
     
     var body: some View {
         NavigationStack {
             List {
-                ForEach(expences.items) {item in
-                    if item.type == "Personal"{
-                        Section("Personal") {
-                            ItemView(item: item)
-                        }
-                    } else {
-                        Section("Business") {
-                            ItemView(item: item)
-                        }
-                    }
-                }
-                .onDelete(perform: removeItems)
+                //challenge3
+                ExpenseSection(title: "Personal", expenses: expenses.personalItems, deleteItems: removePersonalItems)
+                ExpenseSection(title: "Business", expenses: expenses.businessItems, deleteItems: removeBusinessItems)
             }
             .navigationTitle("iExpense")
             .toolbar {
@@ -65,12 +65,33 @@ struct ContentView: View {
             }
         }
         .sheet(isPresented: $showingAddExpense) {
-            AddView(expenses: expences)
+            AddView(expenses: expenses)
         }
     }
     
-    func removeItems(at offset: IndexSet) {
-        expences.items.remove(atOffsets: offset)
+    //challenge3
+    func removeItems(at offsets: IndexSet, in inputArray: [ExpenseItem]) {
+        var objectsToDelete = IndexSet()
+        
+        for offset in offsets {
+            let item = inputArray[offset]
+            
+            if let index =  expenses.items.firstIndex(of: item) {
+                
+                objectsToDelete.insert(index)
+            }
+        }
+        expenses.items.remove(atOffsets: objectsToDelete)
+    }
+    
+    //challenge3
+    func removePersonalItems(at offsets: IndexSet) {
+        removeItems(at:offsets, in: expenses.personalItems)
+    }
+    
+    //challenge3
+    func removeBusinessItems(at offsets: IndexSet) {
+        removeItems(at:offsets, in: expenses.businessItems)
     }
 }
 
@@ -78,26 +99,5 @@ struct ContentView: View {
     ContentView()
 }
 
-//challenge3
-struct ItemView: View {
-    var item: ExpenseItem
-    
-    //challenge1
-    var localCurrency = Locale.current.currency?.identifier ?? "USD"
-    
-    var body: some View {
-        HStack {
-            VStack(alignment: .leading) {
-                Text(item.name)
-                    .font(.headline)
-                
-                Text(item.type)
-            }
-            Spacer()
-            
-            Text(item.amount, format: .currency(code: localCurrency) )
-            //challenge 2
-                .style(for: item)
-        }
-    }
-}
+
+
