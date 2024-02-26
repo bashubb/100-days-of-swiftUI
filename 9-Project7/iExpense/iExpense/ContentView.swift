@@ -97,7 +97,7 @@ struct ItemView: View {
             
             Text(item.amount, format: .currency(code: localCurrency) )
             //challenge 2
-                .foregroundStyle(item.amount < 10 ? .green : item.amount < 100 ? .orange : .red)
+                .style(for: item)
         }
     }
 }

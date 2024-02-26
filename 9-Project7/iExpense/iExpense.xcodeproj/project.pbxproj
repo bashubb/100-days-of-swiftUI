@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B592F9F32B8CA6AD00134600 /* ViewExtense-Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B592F9F22B8CA6AD00134600 /* ViewExtense-Style.swift */; };
 		B5B211D22B88A10C00D2F984 /* iExpenseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B211D12B88A10C00D2F984 /* iExpenseApp.swift */; };
 		B5B211D42B88A10C00D2F984 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B211D32B88A10C00D2F984 /* ContentView.swift */; };
 		B5B211D62B88A10D00D2F984 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5B211D52B88A10D00D2F984 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B592F9F22B8CA6AD00134600 /* ViewExtense-Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewExtense-Style.swift"; sourceTree = "<group>"; };
 		B5B211CE2B88A10C00D2F984 /* iExpense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iExpense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5B211D12B88A10C00D2F984 /* iExpenseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iExpenseApp.swift; sourceTree = "<group>"; };
 		B5B211D32B88A10C00D2F984 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 				B5B211D12B88A10C00D2F984 /* iExpenseApp.swift */,
 				B5B211DF2B88C6B500D2F984 /* AddView.swift */,
 				B5B211D32B88A10C00D2F984 /* ContentView.swift */,
+				B592F9F22B8CA6AD00134600 /* ViewExtense-Style.swift */,
 				B5B211D52B88A10D00D2F984 /* Assets.xcassets */,
 				B5B211D72B88A10D00D2F984 /* Preview Content */,
 			);
@@ -143,6 +146,7 @@
 				B5B211D42B88A10C00D2F984 /* ContentView.swift in Sources */,
 				B5B211D22B88A10C00D2F984 /* iExpenseApp.swift in Sources */,
 				B5B211E02B88C6B500D2F984 /* AddView.swift in Sources */,
+				B592F9F32B8CA6AD00134600 /* ViewExtense-Style.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
