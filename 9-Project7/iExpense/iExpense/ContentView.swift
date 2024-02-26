@@ -45,16 +45,14 @@ struct ContentView: View {
         NavigationStack {
             List {
                 ForEach(expences.items) {item in
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text(item.name)
-                                .font(.headline)
-                            
-                            Text(item.type)
+                    if item.type == "Personal"{
+                        Section("Personal") {
+                            ItemView(item: item)
                         }
-                        Spacer()
-                        
-                        Text(item.amount, format: .currency(code: "USD"))
+                    } else {
+                        Section("Business") {
+                            ItemView(item: item)
+                        }
                     }
                 }
                 .onDelete(perform: removeItems)
@@ -78,4 +76,28 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+}
+
+//challenge3
+struct ItemView: View {
+    var item: ExpenseItem
+    
+    //challenge1
+    var localCurrency = Locale.current.currency?.identifier ?? "USD"
+    
+    var body: some View {
+        HStack {
+            VStack(alignment: .leading) {
+                Text(item.name)
+                    .font(.headline)
+                
+                Text(item.type)
+            }
+            Spacer()
+            
+            Text(item.amount, format: .currency(code: localCurrency) )
+            //challenge 2
+                .foregroundStyle(item.amount < 10 ? .green : item.amount < 100 ? .orange : .red)
+        }
+    }
 }
