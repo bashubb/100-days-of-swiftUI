@@ -12,7 +12,6 @@ struct ListLayoutView: View {
     let astronauts: [String: Astronaut]
     let missions: [Mission]
     
-    
     var body: some View {
         LazyVStack {
             ForEach(missions) { mission in
