@@ -14,6 +14,7 @@
 		B592FA432B90A5F900134600 /* FirstExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B592FA422B90A5F900134600 /* FirstExampleView.swift */; };
 		B592FA452B90A8FD00134600 /* SecondExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B592FA442B90A8FD00134600 /* SecondExampleView.swift */; };
 		B592FA472B90AAFD00134600 /* ThirdExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B592FA462B90AAFD00134600 /* ThirdExampleView.swift */; };
+		B592FA492B90AD1E00134600 /* FourthExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B592FA482B90AD1E00134600 /* FourthExampleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		B592FA422B90A5F900134600 /* FirstExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstExampleView.swift; sourceTree = "<group>"; };
 		B592FA442B90A8FD00134600 /* SecondExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondExampleView.swift; sourceTree = "<group>"; };
 		B592FA462B90AAFD00134600 /* ThirdExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdExampleView.swift; sourceTree = "<group>"; };
+		B592FA482B90AD1E00134600 /* FourthExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthExampleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				B592FA422B90A5F900134600 /* FirstExampleView.swift */,
 				B592FA442B90A8FD00134600 /* SecondExampleView.swift */,
 				B592FA462B90AAFD00134600 /* ThirdExampleView.swift */,
+				B592FA482B90AD1E00134600 /* FourthExampleView.swift */,
 				B592FA382B909C5500134600 /* Assets.xcassets */,
 				B592FA3A2B909C5500134600 /* Preview Content */,
 			);
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B592FA372B909C5200134600 /* ContentView.swift in Sources */,
+				B592FA492B90AD1E00134600 /* FourthExampleView.swift in Sources */,
 				B592FA452B90A8FD00134600 /* SecondExampleView.swift in Sources */,
 				B592FA432B90A5F900134600 /* FirstExampleView.swift in Sources */,
 				B592FA472B90AAFD00134600 /* ThirdExampleView.swift in Sources */,
