@@ -11,6 +11,7 @@
 		B592FA372B909C5200134600 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B592FA362B909C5200134600 /* ContentView.swift */; };
 		B592FA392B909C5500134600 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B592FA382B909C5500134600 /* Assets.xcassets */; };
 		B592FA3C2B909C5500134600 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B592FA3B2B909C5500134600 /* Preview Assets.xcassets */; };
+		B592FA432B90A5F900134600 /* FirstExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B592FA422B90A5F900134600 /* FirstExampleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		B592FA362B909C5200134600 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B592FA382B909C5500134600 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B592FA3B2B909C5500134600 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B592FA422B90A5F900134600 /* FirstExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstExampleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				B592FA342B909C5200134600 /* NavigationApp.swift */,
 				B592FA362B909C5200134600 /* ContentView.swift */,
+				B592FA422B90A5F900134600 /* FirstExampleView.swift */,
 				B592FA382B909C5500134600 /* Assets.xcassets */,
 				B592FA3A2B909C5500134600 /* Preview Content */,
 			);
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B592FA372B909C5200134600 /* ContentView.swift in Sources */,
+				B592FA432B90A5F900134600 /* FirstExampleView.swift in Sources */,
 				B592FA352B909C5200134600 /* NavigationApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
