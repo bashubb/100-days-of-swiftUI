@@ -16,6 +16,7 @@
 		B592FA472B90AAFD00134600 /* ThirdExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B592FA462B90AAFD00134600 /* ThirdExampleView.swift */; };
 		B592FA492B90AD1E00134600 /* FourthExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B592FA482B90AD1E00134600 /* FourthExampleView.swift */; };
 		B592FA4B2B90B3B300134600 /* FifthExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B592FA4A2B90B3B300134600 /* FifthExampleView.swift */; };
+		B592FA4D2B90BA3C00134600 /* NavBarCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B592FA4C2B90BA3C00134600 /* NavBarCustomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		B592FA462B90AAFD00134600 /* ThirdExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdExampleView.swift; sourceTree = "<group>"; };
 		B592FA482B90AD1E00134600 /* FourthExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthExampleView.swift; sourceTree = "<group>"; };
 		B592FA4A2B90B3B300134600 /* FifthExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthExampleView.swift; sourceTree = "<group>"; };
+		B592FA4C2B90BA3C00134600 /* NavBarCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarCustomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				B592FA462B90AAFD00134600 /* ThirdExampleView.swift */,
 				B592FA482B90AD1E00134600 /* FourthExampleView.swift */,
 				B592FA4A2B90B3B300134600 /* FifthExampleView.swift */,
+				B592FA4C2B90BA3C00134600 /* NavBarCustomView.swift */,
 				B592FA382B909C5500134600 /* Assets.xcassets */,
 				B592FA3A2B909C5500134600 /* Preview Content */,
 			);
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B592FA372B909C5200134600 /* ContentView.swift in Sources */,
+				B592FA4D2B90BA3C00134600 /* NavBarCustomView.swift in Sources */,
 				B592FA492B90AD1E00134600 /* FourthExampleView.swift in Sources */,
 				B592FA452B90A8FD00134600 /* SecondExampleView.swift in Sources */,
 				B592FA4B2B90B3B300134600 /* FifthExampleView.swift in Sources */,
