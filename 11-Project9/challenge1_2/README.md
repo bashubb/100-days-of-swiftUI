@@ -9,4 +9,4 @@ From [Hacking with Swift](https://www.hackingwithswift.com/books/ios-swiftui/nav
 >2.  Try changing project 7 so that it lets users edit their issue name in the navigation title rather than a separate textfield. Which option do you prefer?
 
 ## Screenshots
-
+<img src="https://github.com/bashubb/100-days-of-swiftUI/blob/main/11-Project9/challenge1_2/Project9_challenge_1_2.gif">
