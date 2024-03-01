@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B592FAC22B926F4700134600 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B592FAC12B926F4700134600 /* QuizView.swift */; };
 		B5B211622B875C1D00D2F984 /* MilestoneProjects4_6App.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B211612B875C1D00D2F984 /* MilestoneProjects4_6App.swift */; };
 		B5B211642B875C1D00D2F984 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B211632B875C1D00D2F984 /* ContentView.swift */; };
 		B5B211662B875C2000D2F984 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5B211652B875C2000D2F984 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B592FAC12B926F4700134600 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 		B5B2115E2B875C1D00D2F984 /* MilestoneProjects4-6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MilestoneProjects4-6.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5B211612B875C1D00D2F984 /* MilestoneProjects4_6App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestoneProjects4_6App.swift; sourceTree = "<group>"; };
 		B5B211632B875C1D00D2F984 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			children = (
 				B5B211612B875C1D00D2F984 /* MilestoneProjects4_6App.swift */,
 				B5B211632B875C1D00D2F984 /* ContentView.swift */,
+				B592FAC12B926F4700134600 /* QuizView.swift */,
 				B5B211652B875C2000D2F984 /* Assets.xcassets */,
 				B5B211672B875C2000D2F984 /* Preview Content */,
 			);
@@ -139,6 +142,7 @@
 			files = (
 				B5B211642B875C1D00D2F984 /* ContentView.swift in Sources */,
 				B5B211622B875C1D00D2F984 /* MilestoneProjects4_6App.swift in Sources */,
+				B592FAC22B926F4700134600 /* QuizView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
