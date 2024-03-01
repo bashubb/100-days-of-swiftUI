@@ -29,5 +29,4 @@ To solve this challenge you’ll need to draw on skills you learned in tutorials
 
 ## Screenshots
 
-![screenshot1](screenshots/screen01.png)
-![screenshot2](screenshots/screen02.png)
+<img src="https://github.com/bashubb/100-days-of-swiftUI/blob/main/04-Milestone-Projects1-3/screenshots/milestone1_screen1.jpeg" width="40%"><img src="https://github.com/bashubb/100-days-of-swiftUI/blob/main/04-Milestone-Projects1-3/screenshots/milestone1_screen2.jpeg" width="40%">
