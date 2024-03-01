@@ -16,4 +16,4 @@ From [Hacking with Swift](https://www.hackingwithswift.com/books/ios-swiftui/iex
 >3.  For a bigger challenge, try splitting the expenses list into two sections: one for personal expenses, and one for business expenses. This is tricky for a few reasons, not least because it means being careful about how items are deleted!
 
 ## Screenshots
-<img src="https://github.com/bashubb/100-days-of-swiftUI/blob/main/9-Project7/iExpense.gif">
+<img src="https://github.com/bashubb/100-days-of-swiftUI/blob/main/09-Project7/iExpense.gif">
