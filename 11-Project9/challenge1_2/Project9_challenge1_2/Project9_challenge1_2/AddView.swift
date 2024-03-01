@@ -24,39 +24,37 @@ struct AddView: View {
     let types = ["Business", "Personal"]
     
     var body: some View {
-        NavigationStack {
-            Form {
-                Picker("Type", selection: $type){
-                    ForEach(types, id:\.self) {
-                        Text($0)
-                    }
-                }
-                
-                TextField("Amount", value: $amount, format: .currency(code: localCurrency))
-                    .keyboardType(.decimalPad)
-            }
-            //challenge2
-            .navigationTitle($name)
-            //challenge2
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .confirmationAction) {
-                    Button("Save") {
-                        let expense = ExpenseItem(name: name, type: type, amount: amount)
-                        expenses.items.append(expense)
-                        dismiss()
-                    }
-                }
-                //challenge1
-                ToolbarItem(placement: .cancellationAction) {
-                    Button("Cancel") {
-                        dismiss()
-                    }
+        Form {
+            Picker("Type", selection: $type){
+                ForEach(types, id:\.self) {
+                    Text($0)
                 }
             }
-            //challenge 1
-            .navigationBarBackButtonHidden()
+            
+            TextField("Amount", value: $amount, format: .currency(code: localCurrency))
+                .keyboardType(.decimalPad)
         }
+        //challenge2
+        .navigationTitle($name)
+        //challenge2
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .confirmationAction) {
+                Button("Save") {
+                    let expense = ExpenseItem(name: name, type: type, amount: amount)
+                    expenses.items.append(expense)
+                    dismiss()
+                }
+            }
+            //challenge1
+            ToolbarItem(placement: .cancellationAction) {
+                Button("Cancel") {
+                    dismiss()
+                }
+            }
+        }
+        //challenge 1
+        .navigationBarBackButtonHidden()
     }
 }
 
