@@ -18,4 +18,4 @@ From [Hacking with Swift](https://www.hackingwithswift.
 
 ## Screenshots
 
-<img src="https://github.com/bashubb/100-days-of-swiftUI/blob/main/5-Project4/screenshots/BetterRestgif.gif" width="40%"> 
+<img src="https://github.com/bashubb/100-days-of-swiftUI/blob/main/05-Project4/screenshots/BetterRestgif.gif" width="40%"> 
