@@ -11,8 +11,6 @@ navigationPath, navigationDestination(), toolbar customization, toolbar buttons
 ## Challenges
 
 From [Hacking with Swift](https://www.hackingwithswift.com/books/ios-swiftui/navigation-wrap-up):
->1.  Change project 7 (iExpense) so that it uses NavigationLink for adding new expenses rather than a sheet. (Tip: The dismiss() code works great here, but you might want to add the navigationBarBackButtonHidden() modifier so they have to explicitly choose Cancel.)
->2.  Try changing project 7 so that it lets users edit their issue name in the navigation title rather than a separate textfield. Which option do you prefer?
->3.  Return to project 8 (Moonshot), and upgrade it to use NavigationLink(value:). This means adding Hashable conformance, and thinking carefully how to use navigationDestination().
+>[challenge 1 and 2](https://github.com/bashubb/100-days-of-swiftUI/blob/main/11-Project9/challenge1_2/README.md)
 
-## Screenshots
+>[challenge 3](https://github.com/bashubb/100-days-of-swiftUI/blob/main/11-Project9/challenge3/README.md)
