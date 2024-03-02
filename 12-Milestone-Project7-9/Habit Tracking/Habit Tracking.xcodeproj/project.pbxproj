@@ -14,6 +14,7 @@
 		B592FADE2B93630600134600 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B592FADD2B93630600134600 /* Activity.swift */; };
 		B592FAE02B93639A00134600 /* Activities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B592FADF2B93639A00134600 /* Activities.swift */; };
 		B592FAE22B9365B100134600 /* AddActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B592FAE12B9365B100134600 /* AddActivity.swift */; };
+		B592FAE42B93BCF200134600 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B592FAE32B93BCF200134600 /* ActivityView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		B592FADD2B93630600134600 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Activity.swift; path = ../../../../../../../../../Downloads/Activity.swift; sourceTree = "<group>"; };
 		B592FADF2B93639A00134600 /* Activities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activities.swift; sourceTree = "<group>"; };
 		B592FAE12B9365B100134600 /* AddActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivity.swift; sourceTree = "<group>"; };
+		B592FAE32B93BCF200134600 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				B592FAE12B9365B100134600 /* AddActivity.swift */,
 				B592FADD2B93630600134600 /* Activity.swift */,
 				B592FADF2B93639A00134600 /* Activities.swift */,
+				B592FAE32B93BCF200134600 /* ActivityView.swift */,
 				B592FAD32B9287AA00134600 /* Assets.xcassets */,
 				B592FAD52B9287AA00134600 /* Preview Content */,
 			);
@@ -151,6 +154,7 @@
 				B592FAE22B9365B100134600 /* AddActivity.swift in Sources */,
 				B592FAD22B9287A700134600 /* ContentView.swift in Sources */,
 				B592FAD02B9287A700134600 /* Habit_TrackingApp.swift in Sources */,
+				B592FAE42B93BCF200134600 /* ActivityView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
