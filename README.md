@@ -10,7 +10,7 @@ Type               | Number  | Completion
 :---               |  :---:  |   :---:
 Projects           | 9 / 19 | 48%
 Challenges         | 27 / 57 | 48%
-Milestone Projects |  2 / 6  | 33%
+Milestone Projects |  3 / 6  | 50%
 Challenge days     |  1 / 1  | 100%
 
 ## Preview
@@ -30,8 +30,9 @@ Projects / Topics                                                               
 [Project 7](https://github.com/bashubb/100-days-of-swiftUI/tree/main/09-Project7) - *iExpense* <br/>(with challenges)                                         <br/><sub> UserDefaults, Codable, sheet(), onDelete(), @ObservedObject </sub> | <img src="https://github.com/bashubb/100-days-of-swiftUI/blob/main/09-Project7/iExpense1.jpeg" height="10%"> <img src="https://github.com/bashubb/100-days-of-swiftUI/blob/main/09-Project7/iExpense2.jpeg" height="10%"> <img src="https://github.com/bashubb/100-days-of-swiftUI/blob/main/09-Project7/iExpense3.jpeg" height="10%">|
 [Project 8](https://github.com/bashubb/100-days-of-swiftUI/tree/main/10-Project8) - *Moonshot* <br/>(with challenges)                                         <br/><sub> containerRelativeFrame, ScrollView, Navigation, Codable hierarchy, Generics </sub> | <img src="https://github.com/bashubb/100-days-of-swiftUI/blob/main/10-Project8/Moonshot1.jpeg" height="10%"><img src="https://github.com/bashubb/100-days-of-swiftUI/blob/main/10-Project8/Moonshot2.jpeg" height="10%"><img src="https://github.com/bashubb/100-days-of-swiftUI/blob/main/10-Project8/Moonshot3.jpeg" height="10%">><img src="https://github.com/bashubb/100-days-of-swiftUI/blob/main/10-Project8/Moonshot4.jpeg" height="10%"><img src="https://github.com/bashubb/100-days-of-swiftUI/blob/main/10-Project8/Moonshot5.jpeg" height="10%">|
 [Project 9](https://github.com/bashubb/100-days-of-swiftUI/tree/main/11-Project9) - *Navigation* <br/>(with challenges)                                         <br/><sub> navigationPath, navigationDestination(), toolbar customization, toolbar buttons </sub> |<img src="https://github.com/bashubb/100-days-of-swiftUI/blob/main/11-Project9/challenge1_2/Project9_challenge_1_2.gif" width="20%">  |
+[Milestone Projects 7-9](https://github.com/bashubb/100-days-of-swiftUI/tree/main/12-Milestone-Project7-9) - *Habit Tracker*  <br/><sub> @Observable, Equatable, Codable, Identifiable,Navigation Link </sub>| <img src="https://github.com/bashubb/100-days-of-swiftUI/blob/main/12-Milestone-Project7-9/HabitTracker.gif" height="10%"> |
 <!---[Project 9](12-Project9) - *Drawing* <br/>(with challenges)                                         <br/><sub> Paths, shapes, strokes, transforms, drawing groups, animating values, Core Animation, Metal </sub> | ![screen1](12-Project9/screenshots/small/screen01.png) ![screen2](12-Project9/screenshots/small/screen02.png) ![screen3](12-Project9/screenshots/small/screen03.png) ![screen4](12-Project9/screenshots/small/screen04.png) |
-[Milestone Projects 7-9](13-Milestone-Projects7-9) - *Habit Tracker*  | ![screen1](13-Milestone-Projects7-9/screenshots/small/screen01.png) ![screen2](13-Milestone-Projects7-9/screenshots/small/screen02.png) ![screen3](13-Milestone-Projects7-9/screenshots/small/screen03.png) |
+
 [Project 10](14-Project10) - *Cupcakes Corner* <br/>(with challenges)                                         <br/><sub> Codable, URLSession, disabled() </sub> | ![screen1](14-Project10/screenshots/small/screen01.png) ![screen2](14-Project10/screenshots/small/screen02.png) |
 [Project 11](15-Project11) - *Bookworm* <br/>(with challenges)                                         <br/><sub> Core Data, @Binding, Custom components </sub> | ![screen1](15-Project11/screenshots/small/screen01.png) ![screen2](15-Project11/screenshots/small/screen02.png) |
 [Project 12](16-Project12) - *Core Data* <br/>(with challenges)                                         <br/><sub> Core Data </sub> | ![screen1](16-Project12/screenshots/small/screen01.png) |
