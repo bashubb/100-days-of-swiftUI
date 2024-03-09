@@ -35,7 +35,7 @@ struct ContentView: View {
                 
                 Section {
                     NavigationLink("Delivery Details"){
-                        AdressView(order: order)
+                        AddressView(order: order)
                     }
                 }
             }
