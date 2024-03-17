@@ -20,3 +20,4 @@ From [Hacking with Swift](https://www.hackingwithswift.com/books/ios-swiftui/cup
 >3.  Add a new “date” attribute to the Book class, assigning Date.now to it so it gets the current date and time, then format that nicely somewhere in DetailView.
 
 ## Screenshots
+v
