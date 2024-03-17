@@ -13,6 +13,7 @@
 		B502A6B52BA7177F00FCA90F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B502A6B42BA7177F00FCA90F /* Preview Assets.xcassets */; };
 		B502A6BC2BA7184800FCA90F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B502A6BB2BA7184800FCA90F /* User.swift */; };
 		B502A6BE2BA718B200FCA90F /* EditUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B502A6BD2BA718B200FCA90F /* EditUserView.swift */; };
+		B502A6C22BA72B8400FCA90F /* FilteringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B502A6C12BA72B8400FCA90F /* FilteringView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		B502A6B42BA7177F00FCA90F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B502A6BB2BA7184800FCA90F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B502A6BD2BA718B200FCA90F /* EditUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserView.swift; sourceTree = "<group>"; };
+		B502A6C12BA72B8400FCA90F /* FilteringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteringView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 		B502A6AC2BA7177D00FCA90F /* SwiftDataProject */ = {
 			isa = PBXGroup;
 			children = (
+				B502A6C02BA72B6B00FCA90F /* Filtering Query using Predicate */,
 				B502A6BF2BA71CBD00FCA90F /* EditingSwiftDataObjects */,
 				B502A6AD2BA7177D00FCA90F /* SwiftDataProjectApp.swift */,
 				B502A6B12BA7177F00FCA90F /* Assets.xcassets */,
@@ -79,6 +82,14 @@
 				B502A6BB2BA7184800FCA90F /* User.swift */,
 			);
 			path = EditingSwiftDataObjects;
+			sourceTree = "<group>";
+		};
+		B502A6C02BA72B6B00FCA90F /* Filtering Query using Predicate */ = {
+			isa = PBXGroup;
+			children = (
+				B502A6C12BA72B8400FCA90F /* FilteringView.swift */,
+			);
+			path = "Filtering Query using Predicate";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +165,7 @@
 				B502A6B02BA7177D00FCA90F /* EditingSwiftDataObject.swift in Sources */,
 				B502A6BE2BA718B200FCA90F /* EditUserView.swift in Sources */,
 				B502A6AE2BA7177D00FCA90F /* SwiftDataProjectApp.swift in Sources */,
+				B502A6C22BA72B8400FCA90F /* FilteringView.swift in Sources */,
 				B502A6BC2BA7184800FCA90F /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

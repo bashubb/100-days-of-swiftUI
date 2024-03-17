@@ -12,7 +12,7 @@ import SwiftUI
 struct SwiftDataProjectApp: App {
     var body: some Scene {
         WindowGroup {
-            EditingSwiftDataObject()
+            FilteringView()
         }
         .modelContainer(for: User.self)
     }
