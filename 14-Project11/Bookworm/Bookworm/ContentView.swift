@@ -28,11 +28,15 @@ struct ContentView: View {
                             VStack(alignment: .leading) {
                                 Text(book.title)
                                     .font(.headline)
+                                // challenge 2
+                                    .foregroundStyle(book.rating == 1 ? .red : .primary)
                                 Text(book.author)
                                     .foregroundStyle(.secondary)
                             }
                         }
                     }
+                    // challenge 2
+                    .opacity(book.rating == 1 ? 0.6 : 1)
                 }
                 .onDelete(perform: deleteBooks)
             }

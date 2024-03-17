@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B502A69E2BA4D7C100FCA90F /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B502A69D2BA4D7C100FCA90F /* DetailView.swift */; };
+		B502A6A02BA711DC00FCA90F /* String-IsReallyEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = B502A69F2BA711DC00FCA90F /* String-IsReallyEmpty.swift */; };
 		B545D0BC2BA0F46900DFE84E /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = B545D0BB2BA0F46900DFE84E /* Book.swift */; };
 		B545D0BE2BA0F52300DFE84E /* AddBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B545D0BD2BA0F52300DFE84E /* AddBookView.swift */; };
 		B545D0C22BA4CEE300DFE84E /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B545D0C12BA4CEE300DFE84E /* RatingView.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		B502A69D2BA4D7C100FCA90F /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		B502A69F2BA711DC00FCA90F /* String-IsReallyEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String-IsReallyEmpty.swift"; sourceTree = "<group>"; };
 		B545D0BB2BA0F46900DFE84E /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		B545D0BD2BA0F52300DFE84E /* AddBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookView.swift; sourceTree = "<group>"; };
 		B545D0C12BA4CEE300DFE84E /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				B5B4098A2B9E4F670064F47D /* ContentView.swift */,
 				B545D0C32BA4D4C500DFE84E /* EmojiRatingView.swift */,
 				B545D0BD2BA0F52300DFE84E /* AddBookView.swift */,
+				B502A69F2BA711DC00FCA90F /* String-IsReallyEmpty.swift */,
 				B502A69D2BA4D7C100FCA90F /* DetailView.swift */,
 				B5B4098C2B9E4F690064F47D /* Assets.xcassets */,
 				B5B4098E2B9E4F690064F47D /* Preview Content */,
@@ -157,6 +160,7 @@
 				B545D0BC2BA0F46900DFE84E /* Book.swift in Sources */,
 				B502A69E2BA4D7C100FCA90F /* DetailView.swift in Sources */,
 				B545D0C22BA4CEE300DFE84E /* RatingView.swift in Sources */,
+				B502A6A02BA711DC00FCA90F /* String-IsReallyEmpty.swift in Sources */,
 				B545D0C42BA4D4C500DFE84E /* EmojiRatingView.swift in Sources */,
 				B545D0BE2BA0F52300DFE84E /* AddBookView.swift in Sources */,
 			);

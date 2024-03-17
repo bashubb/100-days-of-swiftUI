@@ -42,10 +42,12 @@ struct AddBookView: View {
                 
                 Section{
                     Button("Save") {
-                        let newBook = Book(title: title, author: author, genre: genre, review: review, rating: rating)
+                        let newBook = Book(title: title, author: author, genre: genre, review: review, rating: rating, date: .now)
                         modelContext.insert(newBook)
                         dismiss()
                     }
+                    //challenge 1
+                    .disabled(title.isReallyEmpty || author.isReallyEmpty)
                 }
             }
             .navigationTitle("Add Book")
