@@ -16,6 +16,7 @@
 		B502A6C22BA72B8400FCA90F /* FilteringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B502A6C12BA72B8400FCA90F /* FilteringView.swift */; };
 		B502A6C52BA77C3000FCA90F /* DynamicSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = B502A6C42BA77C3000FCA90F /* DynamicSort.swift */; };
 		B502A6C72BA77C5A00FCA90F /* UsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B502A6C62BA77C5A00FCA90F /* UsersView.swift */; };
+		B502A6CA2BA829E200FCA90F /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = B502A6C92BA829E200FCA90F /* Job.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		B502A6C12BA72B8400FCA90F /* FilteringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteringView.swift; sourceTree = "<group>"; };
 		B502A6C42BA77C3000FCA90F /* DynamicSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicSort.swift; sourceTree = "<group>"; };
 		B502A6C62BA77C5A00FCA90F /* UsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersView.swift; sourceTree = "<group>"; };
+		B502A6C92BA829E200FCA90F /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 		B502A6AC2BA7177D00FCA90F /* SwiftDataProject */ = {
 			isa = PBXGroup;
 			children = (
+				B502A6C82BA829C500FCA90F /* Relationships */,
 				B502A6C32BA77BBD00FCA90F /* Dynamically sorting and filtering */,
 				B502A6C02BA72B6B00FCA90F /* Filtering Query using Predicate */,
 				B502A6BF2BA71CBD00FCA90F /* EditingSwiftDataObjects */,
@@ -104,6 +107,14 @@
 				B502A6C62BA77C5A00FCA90F /* UsersView.swift */,
 			);
 			path = "Dynamically sorting and filtering";
+			sourceTree = "<group>";
+		};
+		B502A6C82BA829C500FCA90F /* Relationships */ = {
+			isa = PBXGroup;
+			children = (
+				B502A6C92BA829E200FCA90F /* Job.swift */,
+			);
+			path = Relationships;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +194,7 @@
 				B502A6BC2BA7184800FCA90F /* User.swift in Sources */,
 				B502A6C72BA77C5A00FCA90F /* UsersView.swift in Sources */,
 				B502A6C52BA77C3000FCA90F /* DynamicSort.swift in Sources */,
+				B502A6CA2BA829E200FCA90F /* Job.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
