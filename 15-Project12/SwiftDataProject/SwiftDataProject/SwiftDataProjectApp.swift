@@ -12,7 +12,7 @@ import SwiftUI
 struct SwiftDataProjectApp: App {
     var body: some Scene {
         WindowGroup {
-            FilteringView()
+            DynamicSort()
         }
         .modelContainer(for: User.self)
     }
