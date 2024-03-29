@@ -1,4 +1,4 @@
-# 100-days-of-swiftui
+# 100-days-of-swiftUI
 
 Solutions to Paul Hudson's "100 days of SwiftUI" projects and challenges.
 
@@ -8,8 +8,8 @@ https://www.hackingwithswift.com/100/swiftui
 
 Type               | Number  | Completion
 :---               |  :---:  |   :---:
-Projects           | 9 / 19 | 48%
-Challenges         | 27 / 57 | 48%
+Projects           | 12 / 19 | 63%
+Challenges         | 36 / 57 | 63%
 Milestone Projects |  3 / 6  | 50%
 Challenge days     |  1 / 1  | 100%
 
@@ -33,7 +33,7 @@ Projects / Topics                                                               
 [Milestone Projects 7-9](https://github.com/bashubb/100-days-of-swiftUI/tree/main/12-Milestone-Project7-9) - *Habit Tracker*  <br/><sub> @Observable, Equatable, Codable, Identifiable,Navigation Link </sub>| <img src="https://github.com/bashubb/100-days-of-swiftUI/blob/main/12-Milestone-Project7-9/HabitTracker.gif" height="10%"> |
 [Project 10](https://github.com/bashubb/100-days-of-swiftUI/tree/main/13-Project10) - *Cupcakes Corner* <br/>(with challenges)                                         <br/><sub> Codable, URLSession, disabled() </sub> | <img src="https://github.com/bashubb/100-days-of-swiftUI/blob/main/13-Project10/Cupcakecorner1.jpeg" height="10%"><img src="https://github.com/bashubb/100-days-of-swiftUI/blob/main/13-Project10/Cupcakecorner2.jpeg" height="10%"> |
 [Project 11](https://github.com/bashubb/100-days-of-swiftUI/tree/main/14-Project11) - *Bookworm* <br/>(with challenges)                                         <br/><sub> Swift Data, @Binding, Custom components, Query, SortDescriptors </sub> | <img src ="https://github.com/bashubb/100-days-of-swiftUI/blob/main/14-Project11/bookworm1.jpeg" height="10%"><img src ="https://github.com/bashubb/100-days-of-swiftUI/blob/main/14-Project11/bookworm2.jpeg" height="10%"><img src ="https://github.com/bashubb/100-days-of-swiftUI/blob/main/14-Project11/bookworm3.jpeg" height="10%"><img src ="https://github.com/bashubb/100-days-of-swiftUI/blob/main/14-Project11/bookworm4.jpeg" height="10%"><img src ="https://github.com/bashubb/100-days-of-swiftUI/blob/main/14-Project11/bookworm5.jpeg" height="10%"> |
-[Project 12](16-Project12) - *Swift Data* <br/>(with challenges)                                         <br/><sub> Core Data </sub> | <img src="https://github.com/bashubb/100-days-of-swiftUI/blob/main/15-Project12/SwiftDataChallenge.gif" width="20%">|
+[Project 12](https://github.com/bashubb/100-days-of-swiftUI/tree/main/15-Project12) - *Swift Data* <br/>(with challenges)                                         <br/><sub> Core Data </sub> | <img src="https://github.com/bashubb/100-days-of-swiftUI/blob/main/15-Project12/SwiftDataChallenge.gif" width="20%">|
 
 <!---[Project 9](12-Project9) - *Drawing* <br/>(with challenges)                                         <br/><sub> Paths, shapes, strokes, transforms, drawing groups, animating values, Core Animation, Metal </sub> | ![screen1](12-Project9/screenshots/small/screen01.png) ![screen2](12-Project9/screenshots/small/screen02.png) ![screen3](12-Project9/screenshots/small/screen03.png) ![screen4](12-Project9/screenshots/small/screen04.png) |
 
