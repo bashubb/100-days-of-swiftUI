@@ -17,9 +17,9 @@ struct DetailUserView: View {
             }
             
             Section("Contact Details") {
-                Text("Adress: \(user.address)")
+                Text("Address: \(user.address)")
                 Text("Company: \(user.company)")
-                Text("email: \(user.email)")
+                Text("Email: \(user.email)")
             }
             
             Section("Firends") {
