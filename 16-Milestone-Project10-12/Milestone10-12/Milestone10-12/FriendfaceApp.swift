@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct Milestone10_12App: App {
+struct FriendfaceApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
