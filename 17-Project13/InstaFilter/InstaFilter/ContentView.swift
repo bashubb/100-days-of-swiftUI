@@ -13,6 +13,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var processedImage: Image?
+    @State private var uiImage: UIImage?
     
     @State private var filterIntensity = 0.5
     @State private var filterRadius = 3.0
@@ -21,6 +22,7 @@ struct ContentView: View {
     
     @State private var selectedItem: PhotosPickerItem?
     @State private var showingFilters = false
+    @State private var showingSaveConfirmation = false
     
     @AppStorage("filterCount") var filterCount = 0
     @Environment(\.requestReview) var requestReview
@@ -84,10 +86,13 @@ struct ContentView: View {
                     Button("Change Filter") {changeFilter()}
                         // challenge 1
                         .disabled(selectedItem == nil)
-                    
                     Spacer()
                     
                     if let processedImage {
+                        Button("Save in Gallery", action: save)
+                        
+                        Spacer()
+                        
                         ShareLink(item: processedImage, preview: SharePreview("Instafilter", image: processedImage))
                     }
                 }
@@ -107,6 +112,7 @@ struct ContentView: View {
                 Button("Vignette") { setFilter(CIFilter.vignette())}
                 Button("Cancel", role: .cancel) { }
             }
+            .alert("Image Saved !", isPresented: $showingSaveConfirmation) { }
             
         }
     }
@@ -139,8 +145,10 @@ struct ContentView: View {
         guard let outputImage = currentFilter.outputImage else { return }
         guard let cgImage = context.createCGImage(outputImage, from: outputImage.extent) else { return }
         
-        let uiImage = UIImage(cgImage: cgImage)
-        processedImage = Image(uiImage: uiImage)
+        uiImage = UIImage(cgImage: cgImage)
+        if let uiImage = uiImage {
+            processedImage = Image(uiImage: uiImage)
+        }
     }
     
     
@@ -154,6 +162,26 @@ struct ContentView: View {
             requestReview()
             filterCount = 0
         }
+    }
+    
+    func save() {
+        guard let processedImage = processedImage else {return}
+        
+        let imageSaver = ImageSaver()
+        
+        imageSaver.successHandler = {
+            print("Success")
+        }
+        
+        imageSaver.errorHandler = {
+            print("Ooops! \($0.localizedDescription)")
+        }
+        
+        if let uiImage = uiImage {
+            imageSaver.writeToPhotoAlbum(image: uiImage)
+        }
+        
+        showingSaveConfirmation = true
     }
 }
 
