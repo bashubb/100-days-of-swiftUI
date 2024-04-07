@@ -17,3 +17,4 @@ From [Hacking with Swift](https://www.hackingwithswift.com/books/ios-swiftui/ins
 >3. Explore the range of available Core Image filters, and add any three of your choosing to the app.
 
 ## Screenshots
+<img src="https://github.com/bashubb/100-days-of-swiftUI/blob/main/17-Project13/Insta1.jpeg" width="15%"><img src="https://github.com/bashubb/100-days-of-swiftUI/blob/main/17-Project13/Insta2.jpeg" width="15%"><img src="https://github.com/bashubb/100-days-of-swiftUI/blob/main/17-Project13/Insta3.jpeg" width="15%"><img src="https://github.com/bashubb/100-days-of-swiftUI/blob/main/17-Project13/Insta4.jpeg" width="15%">
