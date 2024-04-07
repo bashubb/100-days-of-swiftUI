@@ -6,7 +6,7 @@ Includes solutions to the [challenges](https://www.hackingwithswift.com/books/io
 
 ## Topics
 
-UIKit integration, Core Image, Custom bindings, Action Sheets
+Core Image, Custom bindings, Action Sheets, PhotosPicker, Confirmation Dialog
 
 ## Challenges
 
