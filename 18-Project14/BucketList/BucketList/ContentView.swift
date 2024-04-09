@@ -19,7 +19,14 @@ struct ContentView: View {
         MapReader { proxy in
             Map(initialPosition: startPosition) {
                 ForEach(locations) { location in
-                    Marker(location.name, coordinate: CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude))
+                    Annotation(location.name, coordinate: location.coordinate) {
+                        Image(systemName: "star.circle")
+                            .resizable()
+                            .foregroundStyle(.red)
+                            .frame(width: 44, height: 44)
+                            .background(.white)
+                            .clipShape(.circle)
+                    }
                 }
             }
                 .onTapGesture { position in
