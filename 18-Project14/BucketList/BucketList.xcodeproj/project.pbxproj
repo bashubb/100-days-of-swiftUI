@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B55648542BC6A85A001B9869 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55648532BC6A85A001B9869 /* EditView.swift */; };
 		B5FA11EB2BC3D03C00A26C56 /* BucketListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA11EA2BC3D03C00A26C56 /* BucketListApp.swift */; };
 		B5FA11ED2BC3D03C00A26C56 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA11EC2BC3D03C00A26C56 /* ContentView.swift */; };
 		B5FA11EF2BC3D03F00A26C56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5FA11EE2BC3D03F00A26C56 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B55648532BC6A85A001B9869 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		B5FA11E72BC3D03C00A26C56 /* BucketList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BucketList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5FA11EA2BC3D03C00A26C56 /* BucketListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListApp.swift; sourceTree = "<group>"; };
 		B5FA11EC2BC3D03C00A26C56 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 			children = (
 				B5FA11EA2BC3D03C00A26C56 /* BucketListApp.swift */,
 				B5FA11EC2BC3D03C00A26C56 /* ContentView.swift */,
+				B55648532BC6A85A001B9869 /* EditView.swift */,
 				B5FA122D2BC52F4700A26C56 /* Location.swift */,
 				B5FA11F82BC3D8C800A26C56 /* FileManager-writeToDocuments.swift */,
 				B5FA11EE2BC3D03F00A26C56 /* Assets.xcassets */,
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5FA11ED2BC3D03C00A26C56 /* ContentView.swift in Sources */,
+				B55648542BC6A85A001B9869 /* EditView.swift in Sources */,
 				B5FA11F92BC3D8C800A26C56 /* FileManager-writeToDocuments.swift in Sources */,
 				B5FA122E2BC52F4700A26C56 /* Location.swift in Sources */,
 				B5FA11EB2BC3D03C00A26C56 /* BucketListApp.swift in Sources */,
