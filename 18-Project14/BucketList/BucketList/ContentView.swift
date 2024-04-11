@@ -30,9 +30,21 @@ struct ContentView: View {
                                     .frame(width: 44, height: 44)
                                     .background(.white)
                                     .clipShape(.circle)
-                                    .onLongPressGesture {
-                                        viewModel.selectedPlace = location
+                                    .contextMenu {
+                                        Button {
+                                            viewModel.selectedPlace = location
+                                        } label: {
+                                            Text("Edit")
+                                            Image(systemName: "pencil")
+                                        }
+                                        Button {
+                                            viewModel.deleteLocation(location)
+                                        } label: {
+                                            Text("Delete")
+                                            Image(systemName: "trash")
+                                        }
                                     }
+                                    .buttonStyle(.plain)
                             }
                         }
                     }
@@ -62,8 +74,8 @@ struct ContentView: View {
                         .clipShape(.capsule)
                         .shadow(radius: 3)
                         .padding()
-                    
                 }
+                .buttonStyle(.plain)
             }
         } else {
             Button("Unlock Places", action: viewModel.authenticate)

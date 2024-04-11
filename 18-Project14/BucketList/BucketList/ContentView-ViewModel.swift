@@ -16,7 +16,7 @@ extension ContentView {
     class ViewModel {
         private(set) var locations: [Location]
         var selectedPlace: Location?
-        var isUnlocked = true
+        var isUnlocked = false
         
         // challenge 2
         var isShowingAuthenticationError = false
@@ -53,6 +53,11 @@ extension ContentView {
                 longitude: point.longitude)
             locations.append(newLocation)
             save()
+        }
+        
+        func deleteLocation(_ locationToRemove: Location) {
+            guard let index = locations.firstIndex(of: locationToRemove) else { return }
+            locations.remove(at: index)
         }
         
         func updateLocation(location: Location) {
