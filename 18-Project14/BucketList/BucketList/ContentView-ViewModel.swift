@@ -9,13 +9,20 @@ import CoreLocation
 import Foundation
 import LocalAuthentication
 import MapKit
+import SwiftUI
 
 extension ContentView {
     @Observable
     class ViewModel {
         private(set) var locations: [Location]
         var selectedPlace: Location?
-        var isUnlocked = false
+        var isUnlocked = true
+        
+        // challenge 2
+        var isShowingAuthenticationError = false
+        var errorTitle = "Something went wrong"
+        var errorMessage = "Authentication Error"
+        
         
         let savePath = FileManager().getDocumentsDirectory().appending(path: "SavedPlaces")
         
@@ -67,14 +74,21 @@ extension ContentView {
                 
                 context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, authenticationError in
                     if success {
-                        self.isUnlocked
+                        self.isUnlocked = true
                     } else {
-                        // error
+                        // error with authenticate
+                        // challenge 2
+                        self.errorMessage = "There was a problem authenticating You, try again"
+                        self.isShowingAuthenticationError = true
+                        
                     }
                     
                 }
             } else {
                 // no biometrics
+                // challenge 2
+                errorMessage = "Sorry ,your device does not support biometric authentication"
+                isShowingAuthenticationError = true
             }
         }
     }
