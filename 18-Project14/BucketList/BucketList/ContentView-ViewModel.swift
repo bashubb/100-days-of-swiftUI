@@ -92,7 +92,7 @@ extension ContentView {
             } else {
                 // no biometrics
                 // challenge 2
-                errorMessage = "Sorry ,your device does not support biometric authentication"
+                errorMessage = "Sorry, your device does not support biometric authentication"
                 isShowingAuthenticationError = true
             }
         }
