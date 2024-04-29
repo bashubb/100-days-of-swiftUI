@@ -58,6 +58,7 @@ extension ContentView {
         func deleteLocation(_ locationToRemove: Location) {
             guard let index = locations.firstIndex(of: locationToRemove) else { return }
             locations.remove(at: index)
+            save()
         }
         
         func updateLocation(location: Location) {
