@@ -12,7 +12,6 @@ struct ContentView: View {
     @Environment(\.modelContext) var modelContext
     @Query(sort: [SortDescriptor(\Friend.name)]) var friends: [Friend]
     
-    @State private var newName = ""
     @State private var photosItem: PhotosPickerItem?
     @State private var selectedImage: Data?
     @State private var showNameEditAlert = false
@@ -32,7 +31,7 @@ struct ContentView: View {
                     .onDelete(perform: removeFriend)
                 }
             }
-            .listStyle(.plain)
+            .listStyle(.grouped)
             .navigationDestination(for: Friend.self) { friend in
                 DetailFriendView(friend: friend)
             }
@@ -48,8 +47,10 @@ struct ContentView: View {
                             }
                         }
                 }
-                ToolbarItem(placement: .topBarLeading) {
-                    EditButton()
+                if friends.isEmpty == false {
+                    ToolbarItem(placement: .topBarLeading) {
+                        EditButton()
+                    }
                 }
                 
             }
@@ -61,25 +62,18 @@ struct ContentView: View {
                     showNameEditAlert = true
                 }
             }
-            .alert("Add Name", isPresented: $showNameEditAlert) {
-                TextField("Name", text: $newName)
-                HStack {
-                    Button("Save") {
-                        withAnimation { saveFriend() }
+            .sheet(isPresented: $showNameEditAlert) {
+                if let selectedImage = selectedImage {
+                    AddView(selectedImage: selectedImage) { friend in
+                        modelContext.insert(friend)
+                        photosItem = nil
                     }
-                    Button("Cancel", role: .cancel, action: {})
                 }
             }
+            
         }
     }
     
-    func saveFriend() {
-        guard let selectedImage else { return }
-        let newFriend = Friend(name: newName, photo: selectedImage)
-        modelContext.insert(newFriend)
-        newName = ""
-        photosItem = nil
-    }
     
     func removeFriend(_ indexSet: IndexSet) {
         for index in indexSet {
