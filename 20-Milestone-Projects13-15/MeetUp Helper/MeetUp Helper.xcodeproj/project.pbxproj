@@ -12,6 +12,9 @@
 		B56AB8432BEA0A2A006E9887 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B56AB8422BEA0A2A006E9887 /* Assets.xcassets */; };
 		B56AB8462BEA0A2A006E9887 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B56AB8452BEA0A2A006E9887 /* Preview Assets.xcassets */; };
 		B56AB84D2BEA0A8A006E9887 /* FriendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56AB84C2BEA0A8A006E9887 /* FriendModel.swift */; };
+		B56AB84F2BEA11CD006E9887 /* ListFriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56AB84E2BEA11CD006E9887 /* ListFriendView.swift */; };
+		B56AB8512BEA12EC006E9887 /* DetailFriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56AB8502BEA12EB006E9887 /* DetailFriendView.swift */; };
+		B56AB8532BEA26BC006E9887 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56AB8522BEA26BC006E9887 /* AddView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +24,9 @@
 		B56AB8422BEA0A2A006E9887 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B56AB8452BEA0A2A006E9887 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B56AB84C2BEA0A8A006E9887 /* FriendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendModel.swift; sourceTree = "<group>"; };
+		B56AB84E2BEA11CD006E9887 /* ListFriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFriendView.swift; sourceTree = "<group>"; };
+		B56AB8502BEA12EB006E9887 /* DetailFriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFriendView.swift; sourceTree = "<group>"; };
+		B56AB8522BEA26BC006E9887 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +61,9 @@
 			children = (
 				B56AB83E2BEA0A27006E9887 /* MeetUp_HelperApp.swift */,
 				B56AB8402BEA0A27006E9887 /* ContentView.swift */,
+				B56AB8522BEA26BC006E9887 /* AddView.swift */,
+				B56AB8502BEA12EB006E9887 /* DetailFriendView.swift */,
+				B56AB84E2BEA11CD006E9887 /* ListFriendView.swift */,
 				B56AB84C2BEA0A8A006E9887 /* FriendModel.swift */,
 				B56AB8422BEA0A2A006E9887 /* Assets.xcassets */,
 				B56AB8442BEA0A2A006E9887 /* Preview Content */,
@@ -142,6 +151,9 @@
 			files = (
 				B56AB8412BEA0A27006E9887 /* ContentView.swift in Sources */,
 				B56AB84D2BEA0A8A006E9887 /* FriendModel.swift in Sources */,
+				B56AB8532BEA26BC006E9887 /* AddView.swift in Sources */,
+				B56AB8512BEA12EC006E9887 /* DetailFriendView.swift in Sources */,
+				B56AB84F2BEA11CD006E9887 /* ListFriendView.swift in Sources */,
 				B56AB83F2BEA0A27006E9887 /* MeetUp_HelperApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

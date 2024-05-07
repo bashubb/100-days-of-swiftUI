@@ -9,7 +9,8 @@ import Foundation
 import SwiftData
 
 @Model
-class FriendModel {
+class Friend {
+    let id = UUID()
     var name: String
     @Attribute(.externalStorage) var photo: Data
     
@@ -17,4 +18,5 @@ class FriendModel {
         self.name = name
         self.photo = photo
     }
+    
 }
