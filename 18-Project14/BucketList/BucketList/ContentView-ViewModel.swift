@@ -23,7 +23,6 @@ extension ContentView {
         var errorTitle = "Something went wrong"
         var errorMessage = "Authentication Error"
         
-        
         let savePath = FileManager().getDocumentsDirectory().appending(path: "SavedPlaces")
         
         init() {
@@ -86,9 +85,7 @@ extension ContentView {
                         // challenge 2
                         self.errorMessage = "There was a problem authenticating You, try again"
                         self.isShowingAuthenticationError = true
-                        
                     }
-                    
                 }
             } else {
                 // no biometrics
