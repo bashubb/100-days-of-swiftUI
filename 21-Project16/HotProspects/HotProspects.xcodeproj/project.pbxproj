@@ -13,6 +13,7 @@
 		B54B78FA2C0FB20E00B99C8E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B54B78F92C0FB20E00B99C8E /* Preview Assets.xcassets */; };
 		B54B79062C10980500B99C8E /* Prospects.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54B79052C10980500B99C8E /* Prospects.swift */; };
 		B54B79082C10980F00B99C8E /* MeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54B79072C10980F00B99C8E /* MeView.swift */; };
+		B54B790A2C109A0700B99C8E /* Prospect.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54B79092C109A0700B99C8E /* Prospect.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		B54B78F92C0FB20E00B99C8E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B54B79052C10980500B99C8E /* Prospects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prospects.swift; sourceTree = "<group>"; };
 		B54B79072C10980F00B99C8E /* MeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeView.swift; sourceTree = "<group>"; };
+		B54B79092C109A0700B99C8E /* Prospect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prospect.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			children = (
 				B54B78F22C0FB20C00B99C8E /* HotProspectsApp.swift */,
 				B54B78F42C0FB20C00B99C8E /* ContentView.swift */,
+				B54B79092C109A0700B99C8E /* Prospect.swift */,
 				B54B79052C10980500B99C8E /* Prospects.swift */,
 				B54B79072C10980F00B99C8E /* MeView.swift */,
 				B54B78F62C0FB20E00B99C8E /* Assets.xcassets */,
@@ -148,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B54B79082C10980F00B99C8E /* MeView.swift in Sources */,
+				B54B790A2C109A0700B99C8E /* Prospect.swift in Sources */,
 				B54B79062C10980500B99C8E /* Prospects.swift in Sources */,
 				B54B78F52C0FB20C00B99C8E /* ContentView.swift in Sources */,
 				B54B78F32C0FB20C00B99C8E /* HotProspectsApp.swift in Sources */,
