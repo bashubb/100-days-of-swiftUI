@@ -15,7 +15,6 @@ struct Prospects: View {
     }
     
     @Environment(\.modelContext) var modelContext
-    @Environment(\.editMode) private var editMode
     @Query(sort: \Prospect.name) var prospects: [Prospect]
     @State private var isShowingScanner = false
     @State private var selectedProspects = Set<Prospect>()
