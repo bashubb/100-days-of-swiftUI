@@ -8,6 +8,7 @@
 import CodeScanner
 import SwiftData
 import SwiftUI
+import UserNotifications
 
 struct Prospects: View {
     enum FilterType {
@@ -18,6 +19,7 @@ struct Prospects: View {
     @Query(sort: \Prospect.name) var prospects: [Prospect]
     @State private var isShowingScanner = false
     @State private var selectedProspects = Set<Prospect>()
+    
     let filter: FilterType
     
     var title: String {
@@ -31,64 +33,88 @@ struct Prospects: View {
         }
     }
     var body: some View {
-        NavigationStack {
-            List(prospects, selection: $selectedProspects) { prospect in
-                VStack(alignment:.leading) {
-                    Text(prospect.name)
-                        .font(.headline)
-                    Text(prospect.emailAddress)
-                        .foregroundStyle(.secondary)
-                }
-                .swipeActions {
-                    Button("Delete", systemImage: "trash", role:.destructive) {
-                        modelContext.delete(prospect)
+        List(prospects, selection: $selectedProspects) { prospect in
+            NavigationLink {
+                EditProspectView(prospect: prospect)
+            } label: {
+                HStack {
+                    VStack(alignment: .leading) {
+                        Text(prospect.name)
+                            .font(.headline)
+                        Text(prospect.emailAddress)
+                            .foregroundStyle(.secondary)
                     }
+                    Spacer()
+                    if filter == .none {
+                        if prospect.isContacted {
+                            Image(systemName: "checkmark.circle")
+                                .font(.title2)
+                                .foregroundStyle(.green)
+                        } else {
+                            Image(systemName: "questionmark.diamond")
+                                .font(.title2)
+                                .foregroundStyle(.yellow)
+                        }
+                    }
+                }
+                
+            }
+            .swipeActions {
+                Button("Delete", systemImage: "trash", role:.destructive) {
+                    modelContext.delete(prospect)
+                }
+                
+                if prospect.isContacted {
+                    Button("Mark Uncontacted", systemImage: "person.crop.circle.badge.xmark") {
+                        prospect.isContacted.toggle()
+                    }
+                    .tint(.blue)
+                } else {
+                    Button("Mark Contacted", systemImage: "person.crop.circle.fill.badge.checkmark") {
+                        prospect.isContacted.toggle()
+                    }
+                    .tint(.green)
                     
-                    if prospect.isContacted {
-                        Button("Mark Uncontacted", systemImage: "person.crop.circle.badge.xmark") {
-                            prospect.isContacted.toggle()
-                        }
-                        .tint(.blue)
-                    } else {
-                        Button("Mark Contacted", systemImage: "person.crop.circle.fill.badge.checkmark") {
-                            prospect.isContacted.toggle()
-                        }
-                        .tint(.green)
+                    Button("Remind Me", systemImage:"bell") {
+                        addNotification(for: prospect)
                     }
-                }
-                .tag(prospect)
-            }
-            .navigationTitle(title)
-            .toolbar {
-                ToolbarItem(placement:.topBarTrailing) {
-                    Button("Scan", systemImage: "qrcode.viewfinder") {
-                        isShowingScanner = true
-                    }
-                }
-                
-                ToolbarItem(placement: .topBarLeading) {
-                    EditButton()
-                }
-                
-                if selectedProspects.isEmpty == false {
-                    ToolbarItem(placement: .bottomBar) {
-                        Button("Delete Selected", role:.destructive) {
-                            delete()
-                        }
-                        .buttonStyle(.bordered)
-                        
-                    }
-                
+                    .tint(.orange)
                 }
             }
-            .sheet(isPresented: $isShowingScanner) {
-                CodeScannerView(codeTypes: [.qr], simulatedData: "Hubert\nhubert@mail.com", completion: handleScan)
+            .tag(prospect)
+        }
+        .navigationTitle(title)
+        .toolbar {
+            ToolbarItem(placement:.topBarTrailing) {
+                Button("Scan", systemImage: "qrcode.viewfinder") {
+                    isShowingScanner = true
+                }
+            }
+            
+            ToolbarItem(placement: .topBarLeading) {
+                EditButton()
+            }
+            
+            if selectedProspects.isEmpty == false {
+                ToolbarItem(placement: .bottomBar) {
+                    Button("Delete Selected", role:.destructive) {
+                        delete()
+                    }
+                    .buttonStyle(.bordered)
+                    
+                }
+                
             }
         }
-        
+        .sheet(isPresented: $isShowingScanner) {
+            CodeScannerView(codeTypes: [.qr], simulatedData: "Hubert\nhubert@mail.com", completion: handleScan)
+        }
+        .onAppear{
+            selectedProspects = []
+        }
     }
     
-    init(filter: FilterType) {
+    init(filter: FilterType, sort: SortDescriptor<Prospect>) {
         self.filter = filter
         
         if filter != .none {
@@ -96,7 +122,9 @@ struct Prospects: View {
             
             _prospects = Query(filter: #Predicate {
                 $0.isContacted == showContactedOnly
-            }, sort: [SortDescriptor(\Prospect.name)])
+            }, sort: [sort])
+        } else {
+            _prospects = Query(sort: [sort])
         }
     }
     
@@ -121,9 +149,41 @@ struct Prospects: View {
             modelContext.delete(prospect)
         }
     }
+    
+    func addNotification(for prospect: Prospect) {
+        let center = UNUserNotificationCenter.current()
+        
+        let addRequest = {
+            let content = UNMutableNotificationContent()
+            content.title = "Contact \(prospect.name)"
+            content.subtitle = prospect.emailAddress
+            content.sound = UNNotificationSound.default
+            
+            //            var dateComponent = DateComponents()
+            //            dateComponent.hour = 9
+            //            let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponent, repeats: false)
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+            let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+            center.add(request)
+        }
+        
+        center.getNotificationSettings { settings in
+            if settings.authorizationStatus == .authorized {
+                addRequest()
+            } else {
+                center.requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
+                    if success {
+                        addRequest()
+                    } else if let error {
+                        print(error.localizedDescription)
+                    }
+                }
+            }
+        }
+    }
 }
 
 #Preview {
-    Prospects(filter: .none)
+    Prospects(filter: .none, sort: SortDescriptor(\Prospect.name))
         .modelContainer(for: Prospect.self)
 }

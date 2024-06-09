@@ -10,11 +10,23 @@ import SwiftUI
 struct SortableProspects: View {
     let filter: Prospects.FilterType
     @State private var sortOrder = SortDescriptor(\Prospect.name)
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            Prospects(filter: filter, sort: sortOrder)
+                .toolbar {
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Menu("Sort") {
+                            Picker("Sort Order", selection: $sortOrder) {
+                                Text("Date Added")
+                                    .tag(SortDescriptor(\Prospect.dateAdded))
+                                
+                                Text("Name")
+                                    .tag(SortDescriptor(\Prospect.name))
+                            }
+                        }
+                    }
+                }
+        }
     }
-}
-
-#Preview {
-    SortableProspects()
 }
