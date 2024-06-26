@@ -7,11 +7,24 @@
 
 import SwiftUI
 
+// Challenge 2
+extension Shape {
+    func fill(using offset: CGSize) -> some View {
+        if offset.width == 0 {
+            self.fill(.white)
+        } else if offset.width < 0 {
+            self.fill(.red)
+        } else {
+            self.fill(.green)
+        }
+    }
+}
+
 struct CardView: View {
     @Environment(\.accessibilityDifferentiateWithoutColor) var accessibilityDifferentiateWithoutColor
     @Environment(\.accessibilityEnabled) var accessibilitiyEnabled
     let card: Card
-    var removal: (() -> Void)? = nil
+    var removal: ((Bool) -> Void)? = nil
     @State private var isShowingAnswer = false
     @State private var offset = CGSize.zero
     
@@ -27,8 +40,8 @@ struct CardView: View {
                 .background(
                     accessibilityDifferentiateWithoutColor
                     ? nil
-                    : RoundedRectangle(cornerRadius: 25)
-                        .fill(offset.width > 0 ? .green : .red)
+                    : RoundedRectangle(cornerRadius: 25) // Challenge 2
+                        .fill(using: offset)
                 )
                 .shadow(radius: 10)
             VStack {
@@ -63,7 +76,12 @@ struct CardView: View {
                 }
                 .onEnded { _ in
                     if abs(offset.width) > 100 {
-                        removal?()
+                        if offset.width > 0 {
+                            removal?(false)
+                        } else {
+                            removal?(true)
+                            offset = .zero
+                        }
                     } else {
                         withAnimation(.bouncy) {
                             offset = .zero

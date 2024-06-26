@@ -14,6 +14,7 @@
 		B54B79512C1CEED100B99C8E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54B79502C1CEED100B99C8E /* ContentView.swift */; };
 		B54B79532C1CEED400B99C8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B54B79522C1CEED400B99C8E /* Assets.xcassets */; };
 		B54B79562C1CEED400B99C8E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B54B79552C1CEED400B99C8E /* Preview Assets.xcassets */; };
+		B5D728892C2CB7FD00D959E0 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D728882C2CB7FD00D959E0 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		B54B79502C1CEED100B99C8E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B54B79522C1CEED400B99C8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B54B79552C1CEED400B99C8E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B5D728882C2CB7FD00D959E0 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				B54B794E2C1CEED100B99C8E /* FlashzillaApp.swift */,
 				B54B79502C1CEED100B99C8E /* ContentView.swift */,
 				B50DF3D82C22EBAA00628B81 /* Card.swift */,
+				B5D728882C2CB7FD00D959E0 /* DataManager.swift */,
 				B50DF3DA2C22EC4800628B81 /* CardView.swift */,
 				B54B79522C1CEED400B99C8E /* Assets.xcassets */,
 				B54B79542C1CEED400B99C8E /* Preview Content */,
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B54B79512C1CEED100B99C8E /* ContentView.swift in Sources */,
+				B5D728892C2CB7FD00D959E0 /* DataManager.swift in Sources */,
 				B50DF3D92C22EBAA00628B81 /* Card.swift in Sources */,
 				B50DF3DB2C22EC4800628B81 /* CardView.swift in Sources */,
 				B50DF3DD2C25772A00628B81 /* EditCards.swift in Sources */,
