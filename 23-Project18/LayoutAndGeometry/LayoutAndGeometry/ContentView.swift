@@ -14,9 +14,13 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello world!")
-            .background(.red)
-            .offset(x: 100, y: 100)
+        GeometryReader { geo in
+            Rectangle()
+                .fill(.red)
+                .frame(width: geo.size.width * 0.8, height: geo.size.width * 0.8, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                .frame(width: geo.size.width, height: geo.size.height)
+        }
+        
     }
 }
 
